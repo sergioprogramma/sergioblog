@@ -9,7 +9,7 @@ import os
 app = Flask(__name__)
 
 app.config['SECRET_KEY'] = 'any-secret-key-you-choose'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('postgres://dydnduhnuuwoqz:6ad9552573c36b18911df2b05b1006b871f2cace88f5fc78d71551341b2716a0@ec2-52-20-166-21.compute-1.amazonaws.com:5432/d7cpfr3rd56snn')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 db.create_all()
