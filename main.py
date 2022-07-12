@@ -91,7 +91,7 @@ def logout():
 @app.route('/download/cheatsheet')
 @login_required
 def download():
-    return send_from_directory(directory='sergioblog/static/files', filename='cheat_sheet.pdf', as_attachment=False)
+    return send_from_directory(directory='/static/files', filename='cheat_sheet.pdf', as_attachment=False)
 
 
 if __name__ == "__main__":
